@@ -1,0 +1,1 @@
+# RaccoonFacts Easy Twitch View Bot
