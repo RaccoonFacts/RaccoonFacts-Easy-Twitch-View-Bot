@@ -389,6 +389,11 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
                 {
                     try
                     {
+                        if(staggerChkBx.Checked)
+                        {
+                            Thread.Sleep(rand.Next(1000, 10000));
+                        }
+
                         driver.Close(); // Quit  does not work
                         driver.Dispose();
                         try
