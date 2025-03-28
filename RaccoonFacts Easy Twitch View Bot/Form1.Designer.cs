@@ -42,6 +42,7 @@
             this.ProxyCheckBx = new System.Windows.Forms.CheckBox();
             this.staggerChkBx = new System.Windows.Forms.CheckBox();
             this.extraFrmBtn = new System.Windows.Forms.Button();
+            this.mainBar = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.botCountNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IntervalNUD)).BeginInit();
             this.SuspendLayout();
@@ -163,11 +164,20 @@
             this.extraFrmBtn.UseVisualStyleBackColor = true;
             this.extraFrmBtn.Click += new System.EventHandler(this.extraFrmBtn_Click);
             // 
+            // mainBar
+            // 
+            this.mainBar.BackColor = System.Drawing.Color.Green;
+            this.mainBar.Location = new System.Drawing.Point(539, 458);
+            this.mainBar.Name = "mainBar";
+            this.mainBar.Size = new System.Drawing.Size(324, 17);
+            this.mainBar.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 487);
+            this.Controls.Add(this.mainBar);
             this.Controls.Add(this.extraFrmBtn);
             this.Controls.Add(this.staggerChkBx);
             this.Controls.Add(this.ProxyCheckBx);
@@ -207,6 +217,7 @@
         private System.Windows.Forms.CheckBox ProxyCheckBx;
         private System.Windows.Forms.CheckBox staggerChkBx;
         private System.Windows.Forms.Button extraFrmBtn;
+        private System.Windows.Forms.ProgressBar mainBar;
     }
 }
 

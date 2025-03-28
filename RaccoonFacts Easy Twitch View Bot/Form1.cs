@@ -66,6 +66,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace RaccoonFacts_Easy_Twitch_View_Bot
 {
@@ -95,6 +96,10 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
         {
             InitializeComponent();
             LoadSettings(); // Load last used values
+            mainBar.Minimum = 0;
+            mainBar.Maximum = 100;
+            mainBar.Value = 0;  
+
         }
 
         private void startBtn_Click(object sender, EventArgs e)
@@ -103,9 +108,7 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
             SaveSettings();
             Task.Run(() => StartBotSwarm());
         }
-
-
-
+ 
 
         private void LoadSettings()
         {
@@ -192,6 +195,7 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
         {
             while (!token.IsCancellationRequested)
             {
+              
                 string proxySite = GetRandomProxySite();
                 ChromeDriver driver = null;
                 try
@@ -329,6 +333,13 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
             startBtn.Invoke(new Action(() => startBtn.Enabled = false));
             stopBtn.Invoke(new Action(() => stopBtn.Enabled = true));
 
+            mainBar.Invoke(new Action(() =>
+            {
+                mainBar.Maximum = botCount;
+                mainBar.Value = 0;
+                mainBar.Style = ProgressBarStyle.Continuous; // Ensure it's not Marquee
+            }));
+
             try
             {
                 for (int i = 0; i < botCount; i++)
@@ -337,7 +348,17 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
                     LogTxtBx.Invoke(new Action(() => LogTxtBx.AppendText($"Launching bot {i + 1} of {botCount}\r\n")));
                     botTasks.Add(Task.Run(() => WatchStream(targetChannel, cts.Token)));
 
-                    if(staggerChkBx.Checked)
+
+
+                    // Update progress bar
+                    mainBar.Invoke(new Action(() =>
+                    {
+                        mainBar.Value = i + 1; // Increment as each bot starts
+                        mainBar.Refresh();     // Force UI update
+                    }));
+
+
+                    if (staggerChkBx.Checked)
                     {
                         await Task.Delay(rand.Next(10000, 60000), cts.Token);
                     }
@@ -350,19 +371,24 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
 
                 await Task.WhenAll(botTasks);
                 LogTxtBx.Invoke(new Action(() => LogTxtBx.AppendText("View Botting Complete. Good Bye.\r\n")));
+                mainBar.Invoke(new Action(() => mainBar.Value = 0));
             }
             catch (TaskCanceledException)
             {
                 LogTxtBx.Invoke(new Action(() => LogTxtBx.AppendText("View Bot stopped by user.\r\n")));
+                mainBar.Invoke(new Action(() => mainBar.Value = 0));
             }
             catch (Exception ex)
             {
                 LogTxtBx.Invoke(new Action(() => LogTxtBx.AppendText($"View Bot failed: {ex.Message}\r\n")));
+                mainBar.Invoke(new Action(() => mainBar.Value = 0));
             }
             finally
             {
                 startBtn.Invoke(new Action(() => startBtn.Enabled = true));
-               // stopBtn.Invoke(new Action(() => stopBtn.Enabled = false)); // In a perfect world, this would not be commented out
+                mainBar.Invoke(new Action(() => mainBar.Value = 0));
+
+                // stopBtn.Invoke(new Action(() => stopBtn.Enabled = false)); // In a perfect world, this would not be commented out
             }
         }
 
@@ -370,6 +396,7 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
 
         private void stopBtn_Click(object sender, EventArgs e)
         {
+            mainBar.Invoke(new Action(() => mainBar.Value = 0));
             LogTxtBx.AppendText("Stop Button has been pressed\r\n");
 
             // Cancel all tasks
