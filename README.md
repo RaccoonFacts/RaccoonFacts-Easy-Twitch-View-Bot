@@ -77,6 +77,7 @@ Additional proxy lists are included in the code comments for future expansion, w
 - Implement advanced anti-detection techniques (e.g., randomized user agents)
 - Extend the `extraForm` for additional configuration options.
 - Add multi-platform support by migrating to a cross-platform UI framework.
+- Add ChromeDriver And Chrome Download support, Check for Chrome updates.
 
 ## Disclaimer
 This project is intended for educational and research purposes only. Automating viewership on Twitch violates their Terms of Service and Community Guidelines. The developer is not responsible for any consequences, including account suspensions or bans, resulting from the use of this tool. Use at your own risk.
