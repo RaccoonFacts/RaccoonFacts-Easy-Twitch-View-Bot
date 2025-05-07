@@ -5,8 +5,9 @@
 ## Overview
 RaccoonFacts Easy Twitch View Bot is a Windows Forms application designed to automate the process of generating Twitch viewership using Selenium WebDriver and external proxy sites. The bot launches multiple headless Chrome instances, each navigating through a randomly selected proxy site to view a specified Twitch channel, simulating real viewership. The application is built for ease of use with a simple GUI, allowing users to configure the target channel, number of bots, and viewing intervals.
 
-**Note1:** This utilizes chrome, so it is a bit GPU heavy, so I would not do more than 20 viewers due to the load.
-**Note2:** This project is for educational purposes only. Using view bots violates Twitch's Terms of Service and may result in account bans. Use responsibly and at your own risk.
+**Note 1:** This utilizes chrome, so it is a bit GPU heavy, so I would not do more than 20 viewers due to the load.
+
+**Note 2:** This project is for educational purposes only. Using view bots violates Twitch's Terms of Service and may result in account bans. Use responsibly and at your own risk.
 
 ## Features
 - **Automated Viewership**: Launches multiple bots to view a specified Twitch channel via external proxy sites.
