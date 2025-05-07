@@ -14,6 +14,8 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
 {
     public partial class extraForm : Form
     {
+        private btcForm btcForm;
+
         public extraForm()
         {
             InitializeComponent();
@@ -46,6 +48,39 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void subBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string url = "https://www.youtube.com/channel/UC0u47g4vunP2ZERk9lwpiAQ?sub_confirmation=1";
+                System.Diagnostics.Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to open browser: {ex.Message}");
+            }
+
+        }
+
+        private void btcBtn_Click(object sender, EventArgs e)
+        {
+            if (btcForm == null || btcForm.IsDisposed)
+            {
+                btcForm = new btcForm();
+                btcForm.Show();
+            }
+            else
+            {
+                btcForm.Activate();
+
+            }
+
         }
     }
 }

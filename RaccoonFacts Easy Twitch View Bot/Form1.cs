@@ -87,7 +87,7 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
 
         };
 
-
+        private extraForm extraForm;
 
 
 
@@ -480,9 +480,17 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
 
         private void extraFrmBtn_Click(object sender, EventArgs e)
         {
-             
-            extraForm extraForm = new extraForm();
-            extraForm.Show();
+            if (extraForm == null || extraForm.IsDisposed)
+            {
+                extraForm = new extraForm();
+                extraForm.Show();
+            }
+            else
+            {
+                extraForm.Activate();
+
+            }   
+
         }
 
         private void staggerChkBx_CheckedChanged(object sender, EventArgs e)
