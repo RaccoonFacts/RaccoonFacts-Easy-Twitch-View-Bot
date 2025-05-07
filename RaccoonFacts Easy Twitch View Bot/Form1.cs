@@ -100,6 +100,7 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
             mainBar.Maximum = 100;
             mainBar.Value = 0;  
 
+
         }
 
         private void startBtn_Click(object sender, EventArgs e)
@@ -479,8 +480,29 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
 
         private void extraFrmBtn_Click(object sender, EventArgs e)
         {
+             
             extraForm extraForm = new extraForm();
             extraForm.Show();
+        }
+
+        private void staggerChkBx_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkBoxSpoof_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chkBoxSpoof.Checked)
+            {
+                LogTxtBx.AppendText("Spoofing is enabled\r\n");
+                this.Text = "Calculator";
+
+            }
+            else
+            {
+                LogTxtBx.AppendText("Spoofing is disabled\r\n");
+                this.Text = "RaccoonFacts Easy Twitch View Bot";
+            }
         }
     }
 }

@@ -39,20 +39,21 @@
             this.IntervalNUDLbl = new System.Windows.Forms.Label();
             this.LogTxtBx = new System.Windows.Forms.TextBox();
             this.LogLbl = new System.Windows.Forms.Label();
-            this.ProxyCheckBx = new System.Windows.Forms.CheckBox();
             this.staggerChkBx = new System.Windows.Forms.CheckBox();
             this.extraFrmBtn = new System.Windows.Forms.Button();
             this.mainBar = new System.Windows.Forms.ProgressBar();
             this.loadingLbl = new System.Windows.Forms.Label();
+            this.chkBoxSpoof = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.botCountNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IntervalNUD)).BeginInit();
             this.SuspendLayout();
             // 
             // startBtn
             // 
-            this.startBtn.Location = new System.Drawing.Point(12, 373);
+            this.startBtn.Location = new System.Drawing.Point(27, 454);
+            this.startBtn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.startBtn.Name = "startBtn";
-            this.startBtn.Size = new System.Drawing.Size(159, 82);
+            this.startBtn.Size = new System.Drawing.Size(266, 140);
             this.startBtn.TabIndex = 0;
             this.startBtn.Text = "Start";
             this.startBtn.UseVisualStyleBackColor = true;
@@ -60,9 +61,10 @@
             // 
             // stopBtn
             // 
-            this.stopBtn.Location = new System.Drawing.Point(212, 373);
+            this.stopBtn.Location = new System.Drawing.Point(424, 454);
+            this.stopBtn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.stopBtn.Name = "stopBtn";
-            this.stopBtn.Size = new System.Drawing.Size(159, 82);
+            this.stopBtn.Size = new System.Drawing.Size(266, 140);
             this.stopBtn.TabIndex = 1;
             this.stopBtn.Text = "Stop";
             this.stopBtn.UseVisualStyleBackColor = true;
@@ -70,96 +72,97 @@
             // 
             // usernameTxtBx
             // 
-            this.usernameTxtBx.Location = new System.Drawing.Point(12, 25);
+            this.usernameTxtBx.Location = new System.Drawing.Point(20, 43);
+            this.usernameTxtBx.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.usernameTxtBx.Name = "usernameTxtBx";
-            this.usernameTxtBx.Size = new System.Drawing.Size(402, 20);
+            this.usernameTxtBx.Size = new System.Drawing.Size(667, 29);
             this.usernameTxtBx.TabIndex = 2;
             // 
             // usernameLbl
             // 
             this.usernameLbl.AutoSize = true;
-            this.usernameLbl.Location = new System.Drawing.Point(9, 9);
+            this.usernameLbl.Location = new System.Drawing.Point(15, 14);
+            this.usernameLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.usernameLbl.Name = "usernameLbl";
-            this.usernameLbl.Size = new System.Drawing.Size(96, 13);
+            this.usernameLbl.Size = new System.Drawing.Size(159, 22);
             this.usernameLbl.TabIndex = 3;
             this.usernameLbl.Text = "Twitch Username: ";
             // 
             // botCountNUD
             // 
-            this.botCountNUD.Location = new System.Drawing.Point(15, 89);
+            this.botCountNUD.Location = new System.Drawing.Point(26, 151);
+            this.botCountNUD.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.botCountNUD.Name = "botCountNUD";
-            this.botCountNUD.Size = new System.Drawing.Size(90, 20);
+            this.botCountNUD.Size = new System.Drawing.Size(150, 29);
             this.botCountNUD.TabIndex = 4;
             // 
             // botNUDLbl
             // 
             this.botNUDLbl.AutoSize = true;
-            this.botNUDLbl.Location = new System.Drawing.Point(12, 73);
+            this.botNUDLbl.Location = new System.Drawing.Point(20, 124);
+            this.botNUDLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.botNUDLbl.Name = "botNUDLbl";
-            this.botNUDLbl.Size = new System.Drawing.Size(85, 13);
+            this.botNUDLbl.Size = new System.Drawing.Size(148, 22);
             this.botNUDLbl.TabIndex = 5;
             this.botNUDLbl.Text = "Number Of Bots:";
             // 
             // IntervalNUD
             // 
-            this.IntervalNUD.Location = new System.Drawing.Point(139, 89);
+            this.IntervalNUD.Location = new System.Drawing.Point(233, 151);
+            this.IntervalNUD.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.IntervalNUD.Name = "IntervalNUD";
-            this.IntervalNUD.Size = new System.Drawing.Size(160, 20);
+            this.IntervalNUD.Size = new System.Drawing.Size(267, 29);
             this.IntervalNUD.TabIndex = 6;
             // 
             // IntervalNUDLbl
             // 
             this.IntervalNUDLbl.AutoSize = true;
-            this.IntervalNUDLbl.Location = new System.Drawing.Point(136, 73);
+            this.IntervalNUDLbl.Location = new System.Drawing.Point(227, 124);
+            this.IntervalNUDLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.IntervalNUDLbl.Name = "IntervalNUDLbl";
-            this.IntervalNUDLbl.Size = new System.Drawing.Size(163, 13);
+            this.IntervalNUDLbl.Size = new System.Drawing.Size(276, 22);
             this.IntervalNUDLbl.TabIndex = 7;
             this.IntervalNUDLbl.Text = "Refresh Interval + Random Time:";
             // 
             // LogTxtBx
             // 
-            this.LogTxtBx.Location = new System.Drawing.Point(539, 25);
+            this.LogTxtBx.Location = new System.Drawing.Point(717, 43);
+            this.LogTxtBx.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.LogTxtBx.Multiline = true;
             this.LogTxtBx.Name = "LogTxtBx";
             this.LogTxtBx.ReadOnly = true;
             this.LogTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogTxtBx.Size = new System.Drawing.Size(324, 415);
+            this.LogTxtBx.Size = new System.Drawing.Size(352, 550);
             this.LogTxtBx.TabIndex = 8;
             // 
             // LogLbl
             // 
             this.LogLbl.AutoSize = true;
-            this.LogLbl.Location = new System.Drawing.Point(536, 9);
+            this.LogLbl.Location = new System.Drawing.Point(713, 14);
+            this.LogLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LogLbl.Name = "LogLbl";
-            this.LogLbl.Size = new System.Drawing.Size(28, 13);
+            this.LogLbl.Size = new System.Drawing.Size(46, 22);
             this.LogLbl.TabIndex = 9;
             this.LogLbl.Text = "Log:";
-            // 
-            // ProxyCheckBx
-            // 
-            this.ProxyCheckBx.AutoSize = true;
-            this.ProxyCheckBx.Location = new System.Drawing.Point(12, 164);
-            this.ProxyCheckBx.Name = "ProxyCheckBx";
-            this.ProxyCheckBx.Size = new System.Drawing.Size(164, 17);
-            this.ProxyCheckBx.TabIndex = 10;
-            this.ProxyCheckBx.Text = "Try All Proxies (Coming Soon)";
-            this.ProxyCheckBx.UseVisualStyleBackColor = true;
             // 
             // staggerChkBx
             // 
             this.staggerChkBx.AutoSize = true;
-            this.staggerChkBx.Location = new System.Drawing.Point(12, 141);
+            this.staggerChkBx.Location = new System.Drawing.Point(26, 239);
+            this.staggerChkBx.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.staggerChkBx.Name = "staggerChkBx";
-            this.staggerChkBx.Size = new System.Drawing.Size(182, 17);
+            this.staggerChkBx.Size = new System.Drawing.Size(288, 26);
             this.staggerChkBx.TabIndex = 11;
             this.staggerChkBx.Text = "Longer Times Between Each Bot";
             this.staggerChkBx.UseVisualStyleBackColor = true;
+            this.staggerChkBx.CheckedChanged += new System.EventHandler(this.staggerChkBx_CheckedChanged);
             // 
             // extraFrmBtn
             // 
-            this.extraFrmBtn.Location = new System.Drawing.Point(271, 141);
+            this.extraFrmBtn.Location = new System.Drawing.Point(453, 239);
+            this.extraFrmBtn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.extraFrmBtn.Name = "extraFrmBtn";
-            this.extraFrmBtn.Size = new System.Drawing.Size(143, 40);
+            this.extraFrmBtn.Size = new System.Drawing.Size(237, 67);
             this.extraFrmBtn.TabIndex = 12;
             this.extraFrmBtn.Text = "Extra Tools/Help";
             this.extraFrmBtn.UseVisualStyleBackColor = true;
@@ -168,31 +171,45 @@
             // mainBar
             // 
             this.mainBar.BackColor = System.Drawing.Color.Green;
-            this.mainBar.Location = new System.Drawing.Point(539, 458);
+            this.mainBar.Location = new System.Drawing.Point(27, 407);
+            this.mainBar.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.mainBar.Name = "mainBar";
-            this.mainBar.Size = new System.Drawing.Size(324, 17);
+            this.mainBar.Size = new System.Drawing.Size(540, 30);
             this.mainBar.TabIndex = 13;
             // 
             // loadingLbl
             // 
             this.loadingLbl.AutoSize = true;
-            this.loadingLbl.Location = new System.Drawing.Point(536, 442);
+            this.loadingLbl.Location = new System.Drawing.Point(23, 377);
+            this.loadingLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.loadingLbl.Name = "loadingLbl";
-            this.loadingLbl.Size = new System.Drawing.Size(84, 13);
+            this.loadingLbl.Size = new System.Drawing.Size(143, 22);
             this.loadingLbl.TabIndex = 14;
             this.loadingLbl.Text = "Bots Remaining:";
             // 
+            // chkBoxSpoof
+            // 
+            this.chkBoxSpoof.AutoSize = true;
+            this.chkBoxSpoof.Location = new System.Drawing.Point(27, 280);
+            this.chkBoxSpoof.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.chkBoxSpoof.Name = "chkBoxSpoof";
+            this.chkBoxSpoof.Size = new System.Drawing.Size(208, 26);
+            this.chkBoxSpoof.TabIndex = 15;
+            this.chkBoxSpoof.Text = "Spoof Program Name";
+            this.chkBoxSpoof.UseVisualStyleBackColor = true;
+            this.chkBoxSpoof.CheckedChanged += new System.EventHandler(this.chkBoxSpoof_CheckedChanged);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(887, 487);
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ClientSize = new System.Drawing.Size(1084, 603);
+            this.Controls.Add(this.chkBoxSpoof);
             this.Controls.Add(this.loadingLbl);
             this.Controls.Add(this.mainBar);
             this.Controls.Add(this.extraFrmBtn);
             this.Controls.Add(this.staggerChkBx);
-            this.Controls.Add(this.ProxyCheckBx);
             this.Controls.Add(this.LogLbl);
             this.Controls.Add(this.LogTxtBx);
             this.Controls.Add(this.IntervalNUDLbl);
@@ -203,7 +220,10 @@
             this.Controls.Add(this.usernameTxtBx);
             this.Controls.Add(this.stopBtn);
             this.Controls.Add(this.startBtn);
+            this.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Name = "Form1";
             this.Text = "Raccoon Facts Twitch View Botter";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -226,11 +246,11 @@
         private System.Windows.Forms.Label IntervalNUDLbl;
         private System.Windows.Forms.TextBox LogTxtBx;
         private System.Windows.Forms.Label LogLbl;
-        private System.Windows.Forms.CheckBox ProxyCheckBx;
         private System.Windows.Forms.CheckBox staggerChkBx;
         private System.Windows.Forms.Button extraFrmBtn;
         private System.Windows.Forms.ProgressBar mainBar;
         private System.Windows.Forms.Label loadingLbl;
+        private System.Windows.Forms.CheckBox chkBoxSpoof;
     }
 }
 
