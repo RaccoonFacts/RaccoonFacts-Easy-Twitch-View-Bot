@@ -9,6 +9,8 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace RaccoonFacts_Easy_Twitch_View_Bot
 {
@@ -82,5 +84,13 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
             }
 
         }
+ 
+
+        private void extraForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+      
     }
 }

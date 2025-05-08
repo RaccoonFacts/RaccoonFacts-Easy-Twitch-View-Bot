@@ -89,6 +89,7 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
 
         private extraForm extraForm;
 
+        private bool firstTimeCheck = false;
 
 
 
@@ -211,7 +212,6 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
 
                     await Task.Delay(3000, token); // 3s for proxy load
                     LogTxtBx.Invoke(new Action(() => LogTxtBx.AppendText($"Proxy site {proxySite} settled\r\n")));
-
                     IWebElement urlInput = driver.FindElement(By.Id("url"));
                     IWebElement goButton = driver.FindElement(By.Id("requestSubmit"));
                     string twitchUrl = $"https://www.twitch.tv/{channel}";
@@ -512,5 +512,8 @@ namespace RaccoonFacts_Easy_Twitch_View_Bot
                 this.Text = "RaccoonFacts Easy Twitch View Bot";
             }
         }
+
+        
+        
     }
 }

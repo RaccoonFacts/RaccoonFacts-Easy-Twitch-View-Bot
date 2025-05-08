@@ -90,7 +90,7 @@
             // 
             // botCountNUD
             // 
-            this.botCountNUD.Location = new System.Drawing.Point(26, 151);
+            this.botCountNUD.Location = new System.Drawing.Point(26, 127);
             this.botCountNUD.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.botCountNUD.Name = "botCountNUD";
             this.botCountNUD.Size = new System.Drawing.Size(150, 29);
@@ -99,7 +99,7 @@
             // botNUDLbl
             // 
             this.botNUDLbl.AutoSize = true;
-            this.botNUDLbl.Location = new System.Drawing.Point(20, 124);
+            this.botNUDLbl.Location = new System.Drawing.Point(22, 97);
             this.botNUDLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.botNUDLbl.Name = "botNUDLbl";
             this.botNUDLbl.Size = new System.Drawing.Size(148, 22);
@@ -108,7 +108,7 @@
             // 
             // IntervalNUD
             // 
-            this.IntervalNUD.Location = new System.Drawing.Point(233, 151);
+            this.IntervalNUD.Location = new System.Drawing.Point(238, 127);
             this.IntervalNUD.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.IntervalNUD.Name = "IntervalNUD";
             this.IntervalNUD.Size = new System.Drawing.Size(267, 29);
@@ -117,7 +117,7 @@
             // IntervalNUDLbl
             // 
             this.IntervalNUDLbl.AutoSize = true;
-            this.IntervalNUDLbl.Location = new System.Drawing.Point(227, 124);
+            this.IntervalNUDLbl.Location = new System.Drawing.Point(229, 97);
             this.IntervalNUDLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.IntervalNUDLbl.Name = "IntervalNUDLbl";
             this.IntervalNUDLbl.Size = new System.Drawing.Size(276, 22);
@@ -148,7 +148,7 @@
             // staggerChkBx
             // 
             this.staggerChkBx.AutoSize = true;
-            this.staggerChkBx.Location = new System.Drawing.Point(26, 239);
+            this.staggerChkBx.Location = new System.Drawing.Point(27, 207);
             this.staggerChkBx.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.staggerChkBx.Name = "staggerChkBx";
             this.staggerChkBx.Size = new System.Drawing.Size(288, 26);
@@ -159,7 +159,7 @@
             // 
             // extraFrmBtn
             // 
-            this.extraFrmBtn.Location = new System.Drawing.Point(453, 239);
+            this.extraFrmBtn.Location = new System.Drawing.Point(453, 207);
             this.extraFrmBtn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.extraFrmBtn.Name = "extraFrmBtn";
             this.extraFrmBtn.Size = new System.Drawing.Size(237, 67);
@@ -190,7 +190,7 @@
             // chkBoxSpoof
             // 
             this.chkBoxSpoof.AutoSize = true;
-            this.chkBoxSpoof.Location = new System.Drawing.Point(27, 280);
+            this.chkBoxSpoof.Location = new System.Drawing.Point(27, 248);
             this.chkBoxSpoof.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.chkBoxSpoof.Name = "chkBoxSpoof";
             this.chkBoxSpoof.Size = new System.Drawing.Size(208, 26);
